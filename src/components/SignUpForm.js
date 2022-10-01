@@ -3,7 +3,6 @@ import {
   UserOutlined,
   MailTwoTone,
   LockTwoTone,
-  LoginOutlined,
   FormOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";

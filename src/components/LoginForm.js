@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MailTwoTone, LockTwoTone, LoginOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import validator from "validator";
 import toast from "react-hot-toast";
@@ -8,17 +7,16 @@ import toast from "react-hot-toast";
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
-   
-      if (!(validator.isEmail(email))) {
-      toast.error("invalid Email")
-    } 
-    console.log(email)
-    console.log(password)
+
+    if (!validator.isEmail(email)) {
+      toast.error("invalid Email");
+    }
+    console.log(email);
+    console.log(password);
   };
-  
+
   return (
     <div className="form-container">
       <form className="login-form" onSubmit={handleLogin}>
@@ -48,12 +46,15 @@ function LoginForm() {
           />
           <LockTwoTone className="input-icon" />
         </div>
-        <button className="login-btn" type="submit" >
+        <button className="login-btn" type="submit">
           <LoginOutlined className="btn-icon" />
           <span>Login</span>
         </button>
-       <div className="signup-link"> <span>Don't have an account yet? </span>
-      <Link to='/signup'>Create Account</Link></div>
+        <div className="signup-link">
+          {" "}
+          <span>Don't have an account yet? </span>
+          <Link to="/signup">Create Account</Link>
+        </div>
       </form>
     </div>
   );
