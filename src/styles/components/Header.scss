@@ -1,0 +1,42 @@
+header {
+  height: 14vh;
+  background-color: red;
+
+  // height: calc(100vh - var(--navbar-height))
+  .info {
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .email{
+        margin-left: 1.5rem;
+    }
+    .number{
+        margin-right: 1.5rem;
+    }
+  }
+  nav {
+    background-color: var(--primary-color);
+    display: flex;
+    height: 65%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 22px;
+    .menuitems {
+      font-size: 1rem;
+      a {
+        padding: 12px;
+        color: white;
+        font-size: 18px;
+      }
+    }
+    .profile {
+      border: none;
+    }
+    .profile {
+      span {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
