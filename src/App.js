@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import SignUpForm from './components/SignUpForm';
 
-import LoginForm from "./component/LoginForm";
+import LoginForm from "./components/LoginForm";
 function App() {
   return (
     <div className="App">

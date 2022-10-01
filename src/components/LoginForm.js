@@ -19,11 +19,6 @@ function LoginForm() {
     console.log(password)
   };
   
-  
-  
-  
-
-
   return (
     <div className="form-container">
       <form className="login-form" onSubmit={handleLogin}>
