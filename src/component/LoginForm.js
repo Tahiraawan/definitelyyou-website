@@ -8,7 +8,6 @@ import toast from "react-hot-toast";
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
    
