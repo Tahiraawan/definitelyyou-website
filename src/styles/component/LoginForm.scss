@@ -13,8 +13,9 @@
     max-width: 100%;
     padding: 1.5rem;
     background-color: var(--primary-color);
-    box-shadow: 5px 5px 5px rgba(195, 193, 193, 0.8);
+    box-shadow: var(--box-shadow);
     margin-inline: 1.2rem;
+    border-radius: 4px;
 
     h1{
         margin-block: 2rem;
@@ -71,10 +72,11 @@
         border: 1px solid #ffffff;
         border-radius: 1.5rem;
         font-size: 0.9rem;
-        transition: 0.3s all ease-out;
+        transition: var(--transition);
         display: flex;
         align-items: center;
         gap: 8px;
+        
 
         .btn-icon{
             font-size: 1rem;

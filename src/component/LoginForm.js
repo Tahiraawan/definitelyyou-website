@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { MailTwoTone, LockTwoTone, LoginOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import validator from "validator";
+import toast from "react-hot-toast";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -9,7 +11,17 @@ function LoginForm() {
   // navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
+   
+      if (!(validator.isEmail(email))) {
+      toast.error("invalid Email")
+    } 
+    console.log(email)
+    console.log(password)
   };
+  
+  
+  
+  
 
 
   return (
@@ -25,6 +37,7 @@ function LoginForm() {
           <input
             type="email"
             placeholder="Email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -34,12 +47,13 @@ function LoginForm() {
           <input
             type="password"
             placeholder="Password"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <LockTwoTone className="input-icon" />
         </div>
-        <button className="login-btn" type="submit">
+        <button className="login-btn" type="submit" >
           <LoginOutlined className="btn-icon" />
           <span>Login</span>
         </button>
