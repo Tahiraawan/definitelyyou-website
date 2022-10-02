@@ -48,10 +48,18 @@ a {
 
 @import "./styles/components/SignUpForm.scss";
 @import "./styles/components/LoginForm.scss";
-
+@import "./styles/components/Slider.scss";
 @import "./styles/components/Header.scss";
 @import "./styles/components/Footer.scss";
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
+@import "swiper/css/bundle";
+
 @import "./styles/components/Cart.scss";
 @import "./styles/components/ProductCard.scss";
 
 @import "./styles/pages/HomePage.scss";
+
