@@ -1,8 +1,5 @@
 import React from 'react'
 import { StarFilled,ShoppingCartOutlined } from "@ant-design/icons";
-import productImage from '../images/product1.jpg';
-
-
 
 function ProductCard(props) {
 
