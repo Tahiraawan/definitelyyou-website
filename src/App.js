@@ -3,6 +3,8 @@ import SignUpForm from "./components/SignUpForm";
 import LoginForm from "./components/LoginForm";
 import PageLayout from './layout/PageLayout';
 import Cart from "./components/Cart";
+import ProductCard from "./components/ProductCard";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -10,8 +12,10 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/" element={<PageLayout />}></Route>
+        <Route path="/productcard" element={<ProductCard />} />
+        <Route path="/" element={<PageLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
       </Routes>
     </div>
   );
