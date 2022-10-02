@@ -1,35 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  PhoneOutlined,
+  MailTwoTone,
+  ShoppingCartOutlined,
+  MenuOutlined,
+} from "@ant-design/icons";
 
 function Header() {
   return (
     <header>
       <div className="info">
-        <span className="email">definitlyyou@gmail.com</span>
-        <span className="number">0304-34343434</span>
+        <div className="email">
+          <MailTwoTone className="input-icon" />
+          <span>definitlyyou@gmail.com</span>
+        </div>
+        <div className="number">
+          <PhoneOutlined className="input-icon" />
+          <span>0304-34343434</span>
+        </div>
       </div>
       <nav>
         <div className="logo">
           <span>LOGO</span>
         </div>
-        <div className="menuitems">
-          <Link to={''}>Home</Link>
-          <Link to={''}>About</Link>
-          <Link to={''}>Shalwar Kameez</Link>
-          <Link to={''}>Frocks</Link>
-          <Link to={''}>Fancy dress</Link>
-          <Link to={''}>unstitched fabric</Link>
-        </div>
-        <div className="profile">
-          <span>cart</span>
-          <span>
+        <div className="menu-container">
+          <div className="menu">
+            <ul className="menuitems">
+              <li>
+                <Link to={"/login"}>Home</Link>
+              </li>
+              <li>
+                <Link to={""}>About</Link>
+              </li>
+              <li>
+                <Link to={""}>Shalwar Kameez</Link>
+              </li>
+              <li>
+                <Link to={""}>Frocks</Link>
+              </li>
+              <li>
+                <Link to={""}>Fancy dress</Link>
+              </li>
+              <li>
+                <Link to={""}>unstitched fabric</Link>
+              </li>
+            </ul>
+            <MenuOutlined className="menu-icon" />
+          </div>
+          <div className="left-menu">
+            <div className="cart-container">
+            <ShoppingCartOutlined className="input-icon" />
+            <div className="badge">
+              <span>1</span>
+            </div>
+            </div>
             <select name="profile" id="profile">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="mercedes">
+                <Link to={"/login"}>Profile</Link>
+              </option>
+              <option value="mercedes">
+                <Link to={"/logout"}>Logout</Link>
+              </option>
             </select>
-          </span>
+          </div>
         </div>
       </nav>
     </header>
