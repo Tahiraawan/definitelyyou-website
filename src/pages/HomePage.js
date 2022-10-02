@@ -1,16 +1,4 @@
-
-import React from 'react'
 import Slider from '../components/Slider'
-
-
-function HomePage() {
-  return (
-    <Slider/>
-  )
-}
-
-export default HomePage
-
 import React from "react";
 import ProductCard from "../components/ProductCard";
 import productImage from '../images/product1.jpg';
@@ -53,6 +41,7 @@ function HomePage() {
   ];
   return (
     <div className="home-page">
+      <Slider/>
       <div className="products">
         <h2>All Products</h2>
         <div className="all-products">

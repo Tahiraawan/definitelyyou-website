@@ -14,9 +14,6 @@ function App() {
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/login" element={<LoginForm />} />
 
-        <Route path="/" element={<PageLayout />}>
-        <Route index element={<HomePage/>}></Route>
-
         <Route path="/productcard" element={<ProductCard />} />
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
