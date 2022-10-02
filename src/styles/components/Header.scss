@@ -1,0 +1,117 @@
+header {
+  height: 14vh;
+
+  // height: calc(100vh - var(--navbar-height))
+  .info {
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .email {
+      .input-icon {
+        padding-left: 40px;
+      }
+      span {
+        padding-left: 12px;
+        cursor: pointer;
+      }
+    }
+    .number {
+      .input-icon {
+        padding-right: 10px;
+        color: var(--primary-color);
+      }
+      span {
+        padding-right: 32px;
+        cursor: pointer;
+      }
+    }
+  }
+  nav {
+    background-color: var(--primary-color);
+    display: flex;
+    height: 65%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 22px;
+    .menu-container {
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+      @media screen and (max-width: 950px) {
+        gap: 1rem;
+      }
+      .menu {
+        .menuitems {
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          @media screen and (max-width: 950px) {
+            display: none;
+          }
+          a {
+            color: white;
+            font-size: 18px;
+            transition: var(--transition);
+            &:hover {
+              color: var(--primary-btn-color);
+            }
+          }
+        }
+        .menu-icon {
+          display: none;
+          color: var(--secondary-color);
+          font-size: 22px;
+          transition: var(--transition);
+          cursor: pointer;
+          &:hover{
+            color: var(--primary-btn-color);
+          }
+          @media screen and (max-width: 950px) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .left-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .cart-container {
+        position: relative;
+        .input-icon {
+          color: var(--primary-color);
+          font-size: 24px;
+          border-radius: 3px;
+          padding: 4px;
+          background-color: var(--secondary-color);
+        }
+        .badge {
+          width: 1rem;
+          height: 1rem;
+          background-color: red;
+          color: var(--secondary-color);
+          border-radius: 50%;
+          position: absolute;
+          top: -8px;
+          left: -5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      select {
+        border: none;
+        background-color: #fff;
+        padding: 8px;
+      }
+    }
+  }
+}

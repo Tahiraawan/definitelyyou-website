@@ -36,7 +36,7 @@ h6 {
   font-family: var(--secondary-font);
 }
 
-ul {
+ul{
   list-style: none;
 }
 
@@ -46,4 +46,7 @@ a {
 
 @import "./styles/components/SignUpForm.scss";
 @import "./styles/components/LoginForm.scss";
+
+@import "./styles/components/Header.scss";
+
 @import "./styles/components/Footer.scss";
