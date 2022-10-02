@@ -7,22 +7,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 20px;
     .email {
-      .input-icon {
-        padding-left: 40px;
-      }
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
       span {
-        padding-left: 12px;
         cursor: pointer;
       }
     }
     .number {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       .input-icon {
-        padding-right: 10px;
         color: var(--primary-color);
       }
       span {
-        padding-right: 32px;
         cursor: pointer;
       }
     }
@@ -33,7 +35,7 @@ header {
     height: 65%;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 22px;
+    padding: 8px 20px;
     .menu-container {
       display: flex;
       align-items: center;
