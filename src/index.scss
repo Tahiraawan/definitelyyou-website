@@ -8,7 +8,7 @@
   --primary-text: #ffffff;
   --secondary-text: #31c6d4;
 
-  --light-text: rgba(255, 255, 255, 0.6);
+  --light-text: rgba(255, 255, 255, 0.8);
 
   --transition: all 400ms ease;
 
@@ -46,4 +46,7 @@ a {
 
 @import "./styles/components/SignUpForm.scss";
 @import "./styles/components/LoginForm.scss";
+
 @import "./styles/components/Header.scss";
+
+@import "./styles/components/Footer.scss";
