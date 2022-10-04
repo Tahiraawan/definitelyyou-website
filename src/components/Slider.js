@@ -7,7 +7,6 @@ function Slider() {
   return (
     <div className="slider">
       <Swiper
-        // cssMode={true}
         navigation={true}
         pagination={{
           clickable: true,
@@ -39,8 +38,6 @@ function Slider() {
         
         <div className="search-bar">  <input type="text" placeholder="Search Product" />
           <SearchOutlined className="search-icon"/>
-        
-        
         </div>
       </div>
     </div>
