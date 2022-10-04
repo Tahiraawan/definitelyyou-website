@@ -3,6 +3,7 @@ import React from "react";
 import ProductCard from "../components/ProductCard";
 import productImage from '../images/product1.jpg';
 import p1 from '../images/p1.jpg'
+import Testimonials from '../components/Testimonials';
 
 function HomePage() {
   const products = [
@@ -60,6 +61,7 @@ function HomePage() {
           })}
         </div>
       </div>
+      <Testimonials/>
     </div>
   );
 }
