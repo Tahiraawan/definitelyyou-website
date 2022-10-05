@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   PhoneOutlined,
   MailTwoTone,
@@ -8,6 +8,8 @@ import {
 } from "@ant-design/icons";
 
 function Header() {
+
+  const navigate = useNavigate();
   return (
     <header>
       <div className="info">
@@ -49,7 +51,7 @@ function Header() {
             <MenuOutlined className="menu-icon" />
           </div>
           <div className="left-menu">
-            <div className="cart-container">
+            <div className="cart-container" onClick={()=>navigate('/cart')} >
             <ShoppingCartOutlined className="input-icon" />
             <div className="badge">
               <span>1</span>

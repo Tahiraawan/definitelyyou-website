@@ -3,9 +3,9 @@ import SignUpForm from "./components/SignUpForm";
 import LoginForm from "./components/LoginForm";
 import PageLayout from './layout/PageLayout';
 
-import Cart from "./components/Cart";
 import ProductCard from "./components/ProductCard";
 import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/productcard" element={<ProductCard />} />
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/cart" element={<CartPage />} />
 
         </Route>
       </Routes>

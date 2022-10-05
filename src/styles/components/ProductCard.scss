@@ -50,52 +50,7 @@
             span{
                 font-size: 1.2rem;
             }
-            .colors{
-                display: flex;
-                gap: 4px;
-                .color-green{
-                    background-color: #12ae12;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-
-                }
-
-                .color-yellow{
-                    background-color: #c4d50b;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-
-                }
-                .color-blue{
-                    background-color: #1518e4;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                }
-
-                .color-orange{
-                    background-color: #e46115;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                }
-
-                .color-purple{
-                    background-color: #a80a49;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                }
-
-                .color-pink{
-                    background-color: #c75985;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                }
-            }
+            
         }
 
         .size-container{
