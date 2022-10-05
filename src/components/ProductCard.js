@@ -1,5 +1,6 @@
 import React from 'react'
 import { StarFilled,ShoppingCartOutlined } from "@ant-design/icons";
+import Colors from './Colors';
 
 function ProductCard(props) {
 
@@ -25,13 +26,14 @@ function ProductCard(props) {
             </div>
             <div className="color-container">
                 <span>Color:</span>
-                <div className="colors">
+                <Colors color={props.color} />
+                {/* <div className="colors">
                     {
                         props.color.map((color, index)=>{
                             return <div key={index} className={`color-${color}`}></div>
                         })
                     }
-                </div>
+                </div> */}
             </div>
             <div className="size-container">
                 <span>Size:</span>
