@@ -1,0 +1,89 @@
+.contact-form{
+   
+    flex-direction: row;
+   
+    .heading{
+    width: 100%;
+     text-align: center;
+     
+    }
+   .map-contact{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  
+
+     .map{
+        @media screen and (max-width: 1210px){
+            display:none;
+             
+         }
+ 
+     }
+     .contact{
+      form{
+          width: 800px;
+          height: 415px;
+          max-width: 100%;
+          background-color: #ffffff;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          box-shadow: var(--box-shadow);
+          border-radius: 4px;
+          .input-container {
+              width: 90%;
+              position: relative;
+        
+              input {
+                padding: 12px 20px;
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid grey;
+                padding-left: 40px;
+        
+                &:focus {
+                  outline-color: var(--primary-color);
+                  border-color: var(--primary-color);
+                }
+              }
+        
+              .input-icon {
+                position: absolute;
+                top: 13px;
+                left: 12px;
+                font-size: 16px;
+                color: var(--primary-color);
+              }
+            }
+          button{
+              padding: 8px 2rem;
+              margin-top: 1.5rem;
+              background-color: var(--primary-color);
+              color: #ffffff;
+              border: 1px solid var(--primary-color);
+              border-radius: 1.5rem;
+              font-size: 0.9rem;
+              transition: var(--transition);
+              display: flex;
+              align-items: center;
+              gap: 8px;
+        
+              .btn-icon {
+                font-size: 1rem;
+              }
+        
+              &:hover {
+                background-color: #ffffff;
+                color: var(--primary-color);
+              }
+            }
+  
+      }
+  
+     }
+   }
+ }
