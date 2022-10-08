@@ -1,8 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import CartItem from '../components/CartItem';
-import p1 from "../images/p1.jpg"
-import productImage from "../images/product1.jpg";
+import { products } from './../products';
 
 function CartPage() {
 
