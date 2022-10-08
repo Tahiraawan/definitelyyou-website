@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import CartItem from '../components/CartItem';
 import p1 from "../images/p1.jpg"
 import productImage from "../images/product1.jpg";
@@ -39,6 +40,8 @@ function CartPage() {
           size: ["XS", "S", "M", "L", "XL"],
         },
       ];
+      const navigate=useNavigate();
+
   return (
     <div className='cart'>
         <div className="cart-container">
@@ -65,7 +68,7 @@ function CartPage() {
                         <label htmlFor="">I agree to the <span>terms and conditions</span></label>
                     </div>
 
-                    <button className='checkout-btn'>Checkout</button>
+                    <button className='checkout-btn' onClick={()=>navigate('/checkout')}>Checkout</button>
             </div>
         </div>
     </div>

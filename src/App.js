@@ -6,6 +6,8 @@ import PageLayout from './layout/PageLayout';
 import ProductCard from "./components/ProductCard";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
+import CheckOut from "./pages/CheckOut";
+import ThankYou from "./pages/ThankYou";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckOut/>}/>
+          <Route path="/thankyou" element={<ThankYou/>}/>
 
         </Route>
       </Routes>
