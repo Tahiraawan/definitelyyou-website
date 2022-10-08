@@ -6,6 +6,7 @@ import PageLayout from './layout/PageLayout';
 import ProductCard from "./components/ProductCard";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/productpage" element={<ProductPage />} />
 
         </Route>
       </Routes>
