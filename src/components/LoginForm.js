@@ -1,20 +1,45 @@
 import React, { useState } from "react";
 import { MailTwoTone, LockTwoTone, LoginOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import validator from "validator";
 import toast from "react-hot-toast";
+import { loginUser } from "./../api/authApi";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = (e) => {
+
+  const navigate = useNavigate();
+
+  const handleLogin = async(e) => {
     e.preventDefault();
+
+    const data ={
+      email,
+      password
+    }
 
     if (!validator.isEmail(email)) {
       toast.error("invalid Email");
     }
-    console.log(email);
-    console.log(password);
+    else{
+      try{
+        const res = await loginUser(data);
+        if(res.ok){
+          const { data } = await res.json();
+          window.localStorage.setItem('token', data.token);
+          window.sessionStorage.setItem('token', data.token);
+          console.log(window.localStorage.getItem('token'));
+          toast.success('Logged in user successfully');
+          navigate('/');
+        }
+      }
+      catch(err){
+        toast.error(err);
+      }
+     
+    }
+  
   };
 
   return (

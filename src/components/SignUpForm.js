@@ -5,9 +5,10 @@ import {
   LockTwoTone,
   FormOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import validator from "validator";
 import { toast } from "react-hot-toast";
+import { createAccount } from "./../api/authApi";
 
 function SignUpForm() {
   const [firstName, setFirstName] = useState("");
@@ -16,16 +17,17 @@ function SignUpForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSignUp = (e) => {
+  const navigate = useNavigate();
+
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
-    if (password === confirmPassword) {
-      console.log(firstName);
-      console.log(lastName);
-      console.log(email);
-      console.log(password);
-      console.log(confirmPassword);
-    }
+    const data = {
+      first_name: firstName,
+      last_name: lastName,
+      password: password,
+      email: email,
+    };
 
     if (!validator.isEmail(email) && password !== confirmPassword) {
       toast.error("Invalid email and password");
@@ -33,6 +35,17 @@ function SignUpForm() {
       toast.error("Invalid email");
     } else if (password !== confirmPassword) {
       toast.error("Password not matched");
+    } else {
+      try {
+        const res = await createAccount(data);
+        console.log(res);
+        if (res.ok) {
+          toast.success("Account created successfully");
+          navigate("/login");
+        }
+      } catch (err) {
+        toast.error(err);
+      }
     }
   };
 
