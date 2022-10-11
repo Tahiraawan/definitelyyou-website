@@ -28,9 +28,11 @@ function ProductPage() {
         <div className="product-details-container">
             <div className="description">
                 <div className="overview">
+                    <h3>Overview</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, soluta!</p>
                 </div>
                 <div className="reviews">
+                    <h3>Ratings & Review</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at?</p>
                     <h3>4.9</h3>
                     <StarFilled />
