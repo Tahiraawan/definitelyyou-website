@@ -1,32 +1,41 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import {Link} from 'react-router-dom'
 
 function CheckOut() {
-    const navigate=useNavigate();
+  const navigate = useNavigate();
+  const handleLogin = async(e) => {
+    e.preventDefault();
+    navigate('/thankyou')
+  }
   return (
-    <div className="checkout-form">
-      <div className="heading">
+ <div>
+     <form action="" onSubmit={handleLogin}>
+      <div>
         <h2>Checkout:</h2>
       </div>
-      <div className="user-detail">
-        <p>
-          Name <span>Tahira</span>
-        </p>
-        <p>
-          Email <span>tahiramalik689@gmail.com</span>
-        </p>
+      <div className="input-container">
+      <div className="heading">
+          <h3>Customer Info</h3>
+        </div>
+        <div className="customer-info">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+        <input type="email" placeholder="xyz@gmail.com" required />
+        </div>
+     
       </div>
-      <div className="address-detail">
+      <div className="input-container">
         <div className="heading">
           <h3>Address Details</h3>
         </div>
-        <input type="text" placeholder="City" />
-        <input type="text" placeholder="Street No" />
-        <input type="text" placeholder="House No" />
-        <input type="number" placeholder="Zip/Postal" />
+        <div className="address">
+          <input type="text" placeholder="City" required />
+          <input type="text" placeholder="Street No"  required/>
+          <input type="text" placeholder="House No" required />
+          <input type="number" placeholder="Zip/Postal" required />
+        </div>
       </div>
-      <div className="payment-method">
+      <div  className="payment-method">
         <div className="heading">
           <h3>Payment Method</h3>
         </div>
@@ -34,12 +43,19 @@ function CheckOut() {
         <div className="payment-radio">
           <input type="radio" id="cash" name="payment-method" value="Cash" /> 
           <label htmlFor="cash">Cash</label>
-            <input type="radio" id="credit" name="payment-method" value="Credit" /> 
-          <label htmlFor="credit">Credit</label>
+           {" "}
+          <input
+            type="radio"
+            id="credit"
+            name="payment-method"
+            value="Credit"
+          />
+           <label htmlFor="credit">Credit</label>
         </div>
       </div>
-      <button onClick={()=>navigate('/thankyou')}>Submit</button>
-    </div>
+      <button type="submit" >Submit</button>
+    </form>
+ </div>
   );
 }
 

@@ -11,35 +11,31 @@ function LoginForm() {
 
   const navigate = useNavigate();
 
-  const handleLogin = async(e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const data ={
+    const data = {
       email,
-      password
-    }
+      password,
+    };
 
     if (!validator.isEmail(email)) {
       toast.error("invalid Email");
-    }
-    else{
-      try{
+    } else {
+      try {
         const res = await loginUser(data);
-        if(res.ok){
+        if (res.ok) {
           const { data } = await res.json();
-          window.localStorage.setItem('token', data.token);
-          window.sessionStorage.setItem('token', data.token);
-          console.log(window.localStorage.getItem('token'));
-          toast.success('Logged in user successfully');
-          navigate('/');
+          window.localStorage.setItem("token", data.token);
+          window.sessionStorage.setItem("token", data.token);
+          console.log(window.localStorage.getItem("token"));
+          toast.success("Logged in user successfully");
+          navigate("/");
         }
-      }
-      catch(err){
+      } catch (err) {
         toast.error(err);
       }
-     
     }
-  
   };
 
   return (

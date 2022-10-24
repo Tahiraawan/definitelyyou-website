@@ -1,0 +1,75 @@
+
+    
+    form {
+        width: 700px;
+        max-width: 100%;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        gap: 1rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 4px;
+      
+    
+     
+      .input-container {
+        width: 90%;
+        position: relative;
+        .heading{
+            margin-block: 1rem;
+    
+        }
+        .customer-info{
+            
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid grey;
+            border-radius: 4px;
+            box-sizing: border-box;
+           
+            
+    
+            &:focus {
+              outline-color: var(--primary-color);
+              border-color: var(--primary-color);
+            }
+          }
+      }
+      .address-detail {
+      }
+      .payment-method {
+        width: 90%;
+        position: relative;
+        .heading {
+            margin-block: 1rem;
+        }
+        .payment-radio {
+        }
+      }
+      button{
+        padding: 8px 2rem;
+        margin-top: 1.5rem;
+        background-color: var(--primary-color);
+        color: #ffffff;
+        border: 1px solid var(--primary-color);
+        border-radius: 1.5rem;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    
+        .btn-icon {
+          font-size: 1rem;
+        }
+    
+        &:hover {
+          background-color: #ffffff;
+          color: var(--primary-color);
+        }
+      }
+    }
