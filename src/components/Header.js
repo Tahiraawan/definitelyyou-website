@@ -8,7 +8,6 @@ import {
 } from "@ant-design/icons";
 
 function Header() {
-
   const navigate = useNavigate();
   return (
     <header>
@@ -48,14 +47,15 @@ function Header() {
                 <Link to={""}>unstitched fabric</Link>
               </li>
             </ul>
+
             <MenuOutlined className="menu-icon" />
           </div>
           <div className="left-menu">
-            <div className="cart-container" onClick={()=>navigate('/cart')} >
-            <ShoppingCartOutlined className="input-icon" />
-            <div className="badge">
-              <span>1</span>
-            </div>
+            <div className="cart-container" onClick={() => navigate("/cart")}>
+              <ShoppingCartOutlined className="input-icon" />
+              <div className="badge">
+                <span>1</span>
+              </div>
             </div>
             <select name="profile" id="profile">
               <option value="mercedes">
