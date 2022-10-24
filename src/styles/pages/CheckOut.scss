@@ -1,13 +1,12 @@
-
-    
+.form-container{
+    margin-top: 8rem;
     form {
         width: 700px;
         max-width: 100%;
-        background-color: #ffffff;
         padding: 1.5rem;
-        gap: 1rem;
         box-shadow: var(--box-shadow);
         border-radius: 4px;
+        
       
     
      
@@ -17,9 +16,6 @@
         .heading{
             margin-block: 1rem;
     
-        }
-        .customer-info{
-            
         }
         
         input {
@@ -39,16 +35,14 @@
             }
           }
       }
-      .address-detail {
-      }
+    
       .payment-method {
         width: 90%;
         position: relative;
         .heading {
             margin-block: 1rem;
         }
-        .payment-radio {
-        }
+      
       }
       button{
         padding: 8px 2rem;
@@ -73,3 +67,6 @@
         }
       }
     }
+}
+    
+    

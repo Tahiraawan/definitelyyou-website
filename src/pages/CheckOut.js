@@ -8,7 +8,7 @@ function CheckOut() {
     navigate('/thankyou')
   }
   return (
- <div>
+ <div className="form-container">
      <form action="" onSubmit={handleLogin}>
       <div>
         <h2>Checkout:</h2>
